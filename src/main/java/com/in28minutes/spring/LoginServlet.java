@@ -3,7 +3,6 @@ package com.in28minutes.jee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -12,9 +11,8 @@ public class LoginServlet {
 	@Autowired
 	private LoginService service;
 
-
 	@ResponseBody
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login")
 	public String redirect() {
 
 		return "hello world due to response body";
